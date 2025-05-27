@@ -67,7 +67,7 @@
 
 
             </form>
-            <form action="" method="post">
+            <form action="validarlogin.php" method="post">
                 <p>iniciar sesion</p>
                 <input type="text" name="nombre" placeholder="Nombre">
                 <br>
