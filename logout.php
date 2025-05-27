@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="./estilos/main_style.css">
 </head>
 <body>
-    <h1 class="main_title">Blog de Lambdadelta>>>Bernkastel</h1>
+    <h1 class="main_title">Blog de "Inserte tema"</h1>
 
     <nav>
         <ul>
@@ -50,11 +50,22 @@
         </div>
 
         <div class="opciones">
-            <p>Bienvenido, don bollo</p>
-            <button id="boton3">Crear entrada</button>
-            <button id="boton4">Crear categoria</button>
-            <button id="boton5">Mis datos</button>
-            <button id="boton6">Cerrar sesión</button>
+            <p>Registrarse</p>
+            <form action="validar_reg.php" method="post">
+                <input type="text" name="id" placeholder="documento de identidad">
+                <br>
+                <input type="text" name="Nombre" placeholder="Nombre y apellido">
+                <br>
+                <input type="text" name="correo" placeholder="Correo electronico">
+                <br>
+                <input type="password" name="contraseña" placeholder="Crear contraseña">
+                <input type="submit" name="enviar" value="enviar">
+
+
+
+            </form>
+
+            
 
         </div>
 
