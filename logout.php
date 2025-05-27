@@ -67,6 +67,14 @@
 
 
             </form>
+            <form action="" method="post">
+                <p>iniciar sesion</p>
+                <input type="text" name="nombre" placeholder="Nombre">
+                <br>
+                <input type="password" name="password" placeholder="contraseña">
+                <br>
+                <input type="submit" value="acceder"> 
+            </form>
 
             
 
