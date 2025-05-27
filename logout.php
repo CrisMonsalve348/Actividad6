@@ -54,11 +54,14 @@
             <form action="validar_reg.php" method="post">
                 <input type="text" name="id" placeholder="documento de identidad">
                 <br>
-                <input type="text" name="Nombre" placeholder="Nombre y apellido">
+                <input type="text" name="Nombre" placeholder="Nombre">
+                <br>
+                <input type="text" name="apellido" placeholder="apellido">
                 <br>
                 <input type="text" name="correo" placeholder="Correo electronico">
                 <br>
                 <input type="password" name="contraseña" placeholder="Crear contraseña">
+                <input type="date" name="fecha">
                 <input type="submit" name="enviar" value="enviar">
 
 
