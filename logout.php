@@ -52,8 +52,7 @@
         <div class="opciones">
             <p>Registrarse</p>
             <form action="validar_reg.php" method="post">
-                <input type="text" name="id" placeholder="documento de identidad">
-                <br>
+                
                 <input type="text" name="Nombre" placeholder="Nombre">
                 <br>
                 <input type="text" name="apellido" placeholder="apellido">

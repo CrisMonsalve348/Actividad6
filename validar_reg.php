@@ -3,23 +3,12 @@
 require_once "config.php";
 
 
-$id= $nombre =$apellido = $correo = $contraseña=$fecha = "";
-$id_error= $nombre_error=$apellido_error = $correo_error = $contraseña_error=$fecha_error = "";
+$nombre =$apellido = $correo = $contraseña=$fecha = "";
+$nombre_error=$apellido_error = $correo_error = $contraseña_error=$fecha_error = "";
 
 //procesar formulario
 if($_SERVER["REQUEST_METHOD"] == "POST"){
-    $input_id=trim($_POST["id"]);
-    //VALIDARID
-    if(empty($input_id)){
-        $id_error="El campo está vacio";
-    }
-    elseif(!ctype_digit($input_id)){
-        $id_error="Solo puede poner numeros en la IDENTIFICASIÓN";
-
-    }
-    else {
-        $id=$input_id;
-    }
+   
     //VALIDAR NOMBRE
     $input_nombre=trim($_POST["Nombre"]);
     if(empty($input_nombre)){
@@ -71,13 +60,13 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     }
 
 
-    if(empty($id_error) && empty($nombre_error) && empty($correo_error) && empty($contraseña_error) && empty($fecha_error)){
-        $sql="INSERT INTO usuarios (id, nombre, apellidos, email, password, fecha) VALUES (?,?,?,?,?,?)";
+    if(empty($nombre_error) && empty($correo_error) && empty($contraseña_error) && empty($fecha_error)){
+        $sql="INSERT INTO usuarios (nombre, apellidos, email, password, fecha) VALUES (?,?,?,?,?)";
 
         if($stmt=mysqli_prepare($conexion, $sql)){
 
-            mysqli_stmt_bind_param($stmt, "isssss", $param_id, $param_nombre, $param_apellido, $param_email, $param_password, $param_fecha);//las letras isssss son el tipo de dto de cada parametro
-            $param_id = $id;
+            mysqli_stmt_bind_param($stmt, "sssss", $param_nombre, $param_apellido, $param_email, $param_password, $param_fecha);//las letras isssss son el tipo de dto de cada parametro
+            
             $param_nombre = $nombre;
             $param_apellido = $apellido;
             $param_email = $correo;
