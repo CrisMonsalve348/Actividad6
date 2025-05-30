@@ -40,13 +40,14 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     if (mysqli_num_rows($resultado) == 1){
         $usuario = mysqli_fetch_assoc($resultado);
         session_start();
-        $_SESSION["usuario"]=$usuario["nombre"];
+        $_SESSION["usuario"]=$usuario;
         header("location:index.php");
     }
     else{
         echo "El nombre o la contraseña son incorrectos";
         echo "<br>";
        echo '<a href="logout.php"><button>Volver a página de inicio</button></a>';
+       echo $usuario[nombre];
     }
        
     }

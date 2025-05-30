@@ -55,7 +55,7 @@
         </div>
 
         <div class="opciones">
-            <p>Bienvenido, <?php  print_r ($_SESSION["usuario"]);  ?></p>
+            <p>Bienvenido, <?php  echo $_SESSION["usuario"]["nombre"];  ?></p>
             <button id="boton3">Crear entrada</button>
             <button id="boton4">Crear categoria</button>
             <button id="boton5">Mis datos</button>
