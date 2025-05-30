@@ -7,6 +7,11 @@
     <link rel="stylesheet" href="./estilos/main_style.css">
 </head>
 <body>
+    <?php 
+    session_start();
+    require_once "config.php";
+    
+    ?>
     <h1 class="main_title">Blog de "Inserte tema"</h1>
 
     <nav>
@@ -50,7 +55,7 @@
         </div>
 
         <div class="opciones">
-            <p>Bienvenido, don bollo</p>
+            <p>Bienvenido, <?php  print_r ($_SESSION["usuario"]);  ?></p>
             <button id="boton3">Crear entrada</button>
             <button id="boton4">Crear categoria</button>
             <button id="boton5">Mis datos</button>
