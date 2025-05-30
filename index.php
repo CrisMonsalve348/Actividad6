@@ -55,11 +55,13 @@
         </div>
 
         <div class="opciones">
+            <form action="index.php" method="get">
             <p>Bienvenido, <?php  echo $_SESSION["usuario"]["nombre"];  ?></p>
             <button id="boton3">Crear entrada</button>
             <button id="boton4">Crear categoria</button>
             <button id="boton5">Mis datos</button>
-            <button id="boton6">Cerrar sesión</button>
+            <input type="submit" id="boton6" name="boton6" value="cerrar sesion">
+            </form>
 
         </div>
 
@@ -75,3 +77,11 @@
 </footer>
 </body>
 </html>
+<?php 
+if(isset($_GET["boton6"])){
+    session_write_close();
+    header("location:logout.php");
+}
+
+
+?>
