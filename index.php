@@ -57,7 +57,7 @@
         <div class="opciones">
             <form action="index.php" method="get">
             <p>Bienvenido, <?php  echo $_SESSION["usuario"]["nombre"];  ?></p>
-            <button id="boton3">Crear entrada</button>
+            <input type="submit" id="boton3" name="boton3" value="Crear Entrada">
             <button id="boton4">Crear categoria</button>
            <input type="submit" id="boton5" name="boton5" value="Mis datos">
             <input type="submit" id="boton6" name="boton6" value="cerrar sesion">
@@ -78,7 +78,10 @@
 </body>
 </html>
 <?php
-
+//crear entradas
+if(isset($_GET["boton3"])){
+    header("location:entrada.php");
+}
 //editar datos
 if(isset($_GET["boton5"])){
     header("location:editar.php");
