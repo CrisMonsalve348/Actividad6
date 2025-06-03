@@ -47,7 +47,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         echo "El nombre o la contraseña son incorrectos";
         echo "<br>";
        echo '<a href="logout.php"><button>Volver a página de inicio</button></a>';
-       echo $usuario[nombre];
+       
     }
        
     }

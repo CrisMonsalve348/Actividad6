@@ -29,6 +29,14 @@
                 <a href="#">Contacto</a>
 
             </li>
+            <?php 
+            $lista_cat=$_SESSION["categorias"];
+            foreach($lista_cat as $item){
+                echo "<li> <a>". $item ."</a></li>";
+            }
+            
+            
+            ?>
 
         </ul>
     </nav>
@@ -58,7 +66,7 @@
             <form action="index.php" method="get">
             <p>Bienvenido, <?php  echo $_SESSION["usuario"]["nombre"];  ?></p>
             <input type="submit" id="boton3" name="boton3" value="Crear Entrada">
-            <button id="boton4">Crear categoria</button>
+            <input type="submit" id="boton4" name="boton4" value="Crear categoria">
            <input type="submit" id="boton5" name="boton5" value="Mis datos">
             <input type="submit" id="boton6" name="boton6" value="cerrar sesion">
             </form>
@@ -81,6 +89,10 @@
 //crear entradas
 if(isset($_GET["boton3"])){
     header("location:entrada.php");
+}
+//crear categorias
+if(isset($_GET["boton4"])){
+    header("location:categoria.php");
 }
 //editar datos
 if(isset($_GET["boton5"])){

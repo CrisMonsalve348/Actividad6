@@ -1,7 +1,7 @@
 <?php 
 define("DB_SERVIDOR", "localhost");
 define("DB_USUARIO", "root");
-define("DB_CONTRASEÑA", "");
+define("DB_CONTRASEÑA", "123456");
 define("DB_NOMBRE", "blogtematicas");
 
 //Crear conexion a la base e datos 
