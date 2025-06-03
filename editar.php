@@ -34,15 +34,16 @@
     </nav>
     <main>
     <section class="main">
-        <h1>inserte titulo weon</h1>
-        <h4>subtitulo weon</h4>
-        <h6>fecha y nombre weon</h6>
-        <p class="informacion">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur placeat cupiditate a nam necessitatibus dolorem autem tempore praesentium debitis, sapiente unde aut, consequuntur accusamus natus. Repellendus eius laudantium error impedit?</p>
+    <?php 
+    echo "Nombre: ". $_SESSION["usuario"]["nombre"];
+    echo "<br>";
+    echo "Apellido: ". $_SESSION["usuario"]["apellidos"];
+    echo "<br>";
+    echo "Correo electrónico: ".$_SESSION["usuario"]["email"]; 
 
-        <div class="botones">
-            <button id="boton1">Editar entrada</button>
-            <button id="boton2">Eliminar entrada</button>
-        </div>
+    
+    
+    ?>
         
 
     </section>
